@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 /**
  * Created by pzawa on 02.02.2017.
  */
-public class EmpDAOJdbcImplTest {
+public class EmpDAOJdbcImplTest { 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     private EmpDAO empDAO;
 

@@ -10,7 +10,7 @@ import java.sql.SQLException;
 /**
  * Created by pzawa on 02.02.2017.
  */
-public class DeptDAOJdbcImpl implements DeptDAO{
+public class DeptDAOJdbcImpl implements DeptDAO {
     private static String QUERY_BY_ID  = "SELECT deptno, dname, location FROM Dept WHERE deptno = ?";
     private static String INSERT_STMT = "INSERT INTO Dept(deptno, dname, location) VALUES(?,?,?)";
     private static String UPDATE_STMT= "UPDATE Dept set dname = ?, location = ?  WHERE deptno = ?";
@@ -38,6 +38,8 @@ public class DeptDAOJdbcImpl implements DeptDAO{
         return null;
     }
 
+
+    // pakowanie do obiektów
     private Department mapFromResultSet(ResultSet rs) throws SQLException {
         int deptno = rs.getInt("deptno");
         String dname = rs.getString("dname");
